@@ -27,7 +27,7 @@
                 <form method="POST" class="p-4 d-inline" action="{{ route('comic.destroy', $comic)}}" class="delete-form" data-id="{{ $comic->id }}" data-title="{{ $comic->title }}">
                     @csrf
                     @method("DELETE")
-                    <button><i class="fas fa-trash"></i></button>
+                    <button type="submit"><i class="fas fa-trash"></i></button>
                 </form>
                 
             </div>
@@ -39,7 +39,7 @@
 @endsection
     
 
-{{-- @section('script-section')
+@section('script-section')
     <script>
         const deleteFormElements = document.querySelectorAll('.delete-form');
         deleteFormElements.forEach(form => {
@@ -54,4 +54,4 @@
                 })
         });
     </script>
-@endsection --}}
+@endsection

@@ -39,7 +39,7 @@ class ComicController extends Controller
     {
         $data = $request->all();
         // dd($data);
-        $comic = new Comic();
+        // $comic = new Comic();
 
         //METODO MANUALE
         // $comic->name = $data['name'];
@@ -49,7 +49,7 @@ class ComicController extends Controller
 
         //METODO CREATE con FILLABLES che va inserito nel model come proprietà protected 
         $comic= Comic::create($data);
-        $comic->save();
+        // $comic->save();
         return redirect()->route('comic.show', $comic);
     }
 
